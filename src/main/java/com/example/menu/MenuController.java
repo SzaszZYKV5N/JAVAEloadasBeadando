@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -20,11 +21,14 @@ public class MenuController {
     }
     @FXML
     AnchorPane rootPane;
-
+    @FXML
+    private TableView<Hely> tableView;
     @FXML
     private void Ujablak(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("second.fxml"));
         rootPane.getChildren().setAll(pane);
+
+
     }
     private void loadFXMLToRootPane(String fxmlFileName) {
         try {
