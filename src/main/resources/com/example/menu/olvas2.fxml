@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17.0.12" minWidth="750" prefWidth="750" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane scaleShape="false" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.OlvasController">
     <children>
-        <Label text="Ez az Olvas2 nézet" layoutX="50.0" layoutY="50.0"/>
+        <Label layoutX="-2.0" layoutY="14.0" prefHeight="26.0" prefWidth="756.0" text=" Megjelenítés szűrők segítségével (Olvas2 almenü)" textFill="#e30202">
+            <font>
+                <Font size="18.0" />
+            </font></Label>
+        <TableView fx:id="tablazat" layoutX="5.0" layoutY="162.0" prefHeight="310.0" prefWidth="750.0">
+            <columns>
+                <TableColumn prefWidth="40.0" text="Id" />
+                <TableColumn prefWidth="148.0" text="Telepules" />
+                <TableColumn prefWidth="237.0" text="Utca" />
+                <TableColumn prefWidth="138.0" text="Szerelo" />
+                <TableColumn prefWidth="92.0" text="Munkaóra" />
+                <TableColumn editable="true" prefWidth="85.0" text="Költség" />
+            </columns>
+        </TableView>
+        <Label layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="755.0" text=" Három táblás lekérdezés (hely, munkalap, szerelo táblák)" />
+      <Button layoutX="613.0" layoutY="118.0" mnemonicParsing="false" text="Szűrés" />
+      <Label layoutX="30.0" layoutY="77.0" text="Szerelő kiválasztás:" />
+      <ChoiceBox layoutX="138.0" layoutY="73.0" prefWidth="150.0" />
+      <Label layoutX="30.0" layoutY="110.0" text="Cím keresés" />
+      <TextField layoutX="138.0" layoutY="106.0" prefHeight="25.0" prefWidth="150.0" />
+      <Separator layoutX="81.0" layoutY="56.0" prefWidth="200.0" />
+      <RadioButton layoutX="332.0" layoutY="77.0" mnemonicParsing="false" text="2001 előtti" />
+      <RadioButton layoutX="332.0" layoutY="110.0" mnemonicParsing="false" text="2002 utáni" />
+      <CheckBox layoutX="456.0" layoutY="77.0" mnemonicParsing="false" text="2 munkaóránál több" />
+
     </children>
 </AnchorPane>
-

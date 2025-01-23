@@ -5,9 +5,7 @@ module com.example.menu {
     requires java.naming;
     requires java.sql;
     requires jakarta.persistence;
-
     opens com.example.menu to javafx.fxml;
-
     exports com.example.menu;
 
 
