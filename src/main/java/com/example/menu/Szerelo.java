@@ -3,6 +3,26 @@ package com.example.menu;
 public class Szerelo {
     private int id;
     private String nev;
+    private int kezdev;
+
+    public int getKezdev() {
+        return kezdev;
+    }
+
+    public Szerelo(int id, String nev, int kezdev) {
+        this.id = id;
+        this.nev = nev;
+        this.kezdev = kezdev;
+    }
+
+    public Szerelo(String nev, int kezdev) {
+        this.nev = nev;
+        this.kezdev = kezdev;
+    }
+
+    public void setKezdev(int kezdev) {
+        this.kezdev = kezdev;
+    }
 
     public Szerelo(int id, String nev) {
         this.id = id;

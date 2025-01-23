@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane scaleShape="false" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.TorolController">
+    <children>
+        <Label layoutX="-2.0" layoutY="14.0" prefHeight="26.0" prefWidth="756.0" text="Új szerelő hozzáadása" textFill="#f50101">
+            <font>
+                <Font size="18.0" />
+            </font></Label>
+        <TableView fx:id="tablazat" layoutX="378.0" layoutY="70.0" prefHeight="213.0" prefWidth="351.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="45.0" text="Id" />
+                <TableColumn fx:id="szereloColumn" prefWidth="240.0" text="Szerelő" />
+                <TableColumn fx:id="belepColumn" prefWidth="85.0" text="Belépés" />
+            </columns>
+        </TableView>
+        <Label layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="755.0" text="Három táblás lekérdezés (szerelo táblák)" />
+        <Button fx:id="btn1" layoutX="158.0" layoutY="198.0" mnemonicParsing="false" onAction="#torol" text="Törlés" />
+        <Label layoutX="61.0" layoutY="84.0" text="A törlendő szerelő sorszáma: " />
+        <ComboBox fx:id="cb1" layoutX="138" layoutY="77" AnchorPane.topAnchor="120.0" />
+
+
+    </children>
+</AnchorPane>

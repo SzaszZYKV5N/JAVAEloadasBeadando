@@ -8,11 +8,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.sql.*;
 
 public class Olvas2Controller {
-
+    @FXML
+    public CheckBox ch1;
     @FXML
     private ComboBox<Szerelo> cb1;
 @FXML private Label lbFeltet;
 @FXML private TextField cimKereso;
+@FXML private CheckBox Ch1;
     @FXML
     public TableView<OlvasDAO> tablazat;
     @FXML
@@ -27,12 +29,17 @@ public class Olvas2Controller {
     private TableColumn<OlvasDAO, String> oraColumn;
     @FXML
     private TableColumn<OlvasDAO, String> anyagarColumn;
-
+    @FXML
+    private ToggleGroup group;
+    @FXML
+    private RadioButton rb1;
+    @FXML
+    private RadioButton rb2;
     @FXML
     public void initialize() throws SQLException {
 
 
-
+        ch1.setSelected(false);
         // Táblázat oszlopok konfigurálása
         tablazat.getColumns().clear();
         idColumn = new TableColumn<>("Helyazonosító");
@@ -104,20 +111,28 @@ public class Olvas2Controller {
     public void szuresClick(ActionEvent event) throws SQLException {
         int a = kivSzer();
         StringBuilder newFeltetel = new StringBuilder(" WHERE sz.az = m.szereloaz AND m.helyaz = h.az ");
-
         // Szerelő szűrés hozzáadása
         if (a != 0) {
             newFeltetel.append(" AND m.szereloaz = ").append(a);
         }
-
         // Utca név szűrés hozzáadása
         if (!cimKereso.getText().isEmpty()) {
             newFeltetel.append(" AND h.utca LIKE '").append(cimKereso.getText()).append("%'");
         }
-
+        //értékhatár szűrés hozzáadása
+        if(rb1.isSelected())
+        {
+            newFeltetel.append(" AND m.anyagar < 5000 ");
+        }
+        if(rb2.isSelected()){
+            newFeltetel.append(" AND m.anyagar >= 5000 ");
+        }
+        if(ch1.isSelected()){
+            newFeltetel.append(" AND m.munkaora >2 ");
+        }
+        //rendezze sorba
         newFeltetel.append(" ORDER BY m.helyaz");
-        feltetel = newFeltetel.toString();
-
+            feltetel = newFeltetel.toString();
         Tablabovit();
     }
 

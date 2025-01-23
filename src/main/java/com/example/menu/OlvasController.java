@@ -14,8 +14,7 @@ import java.util.List;
 public class OlvasController {
 
 
-    @FXML
-    private Label welcomeText;
+
     @FXML
     public TableView<OlvasDAO> tablazat;
     @FXML
