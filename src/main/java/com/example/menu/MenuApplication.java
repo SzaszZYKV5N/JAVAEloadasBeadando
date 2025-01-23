@@ -4,13 +4,16 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 public class MenuApplication extends Application {
-    static SessionFactory factory;
-    public String oldal ="menu.fxml";
+
+    public String oldal = "menu.fxml";
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MenuApplication.class.getResource(oldal));
@@ -21,7 +24,11 @@ public class MenuApplication extends Application {
     }
 
     public static void main(String[] args) {
+
+
+
         launch();
-        Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+
+
     }
 }

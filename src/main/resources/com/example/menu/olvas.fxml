@@ -2,18 +2,25 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane scaleShape="false" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane scaleShape="false" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.OlvasController">
     <children>
-        <Label layoutX="50.0" layoutY="50.0" text="Ez az Olvas nézet" />
-      <TableView layoutX="5.0" layoutY="72.0" prefHeight="400.0" prefWidth="750.0" fx:id="tablazat">
-        <columns>
-          <TableColumn prefWidth="30.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-          <TableColumn prefWidth="75.0" text="C3" />
-          <TableColumn prefWidth="75.0" text="C4" />
-        </columns>
+        <Label layoutX="-2.0" layoutY="14.0" prefHeight="26.0" prefWidth="756.0" text="Az egyes címeken elvégzett munkák megjelenítése" textFill="#e30202">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TableView fx:id="tablazat" layoutX="5.0" layoutY="72.0" prefHeight="400.0" prefWidth="750.0">
+          <columns>
+              <TableColumn prefWidth="10.0" text="Id" />
+              <TableColumn prefWidth="75.0" text="Telepules" />
+              <TableColumn prefWidth="150.0" text="Utca" />
+              <TableColumn prefWidth="150.0" text="Szerelo" />
+              <TableColumn prefWidth="150.0" text="Munkaóra" />
+              <TableColumn prefWidth="150.0" text="Költség" editable="true" />
+          </columns>
       </TableView>
+      <Label layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="755.0" text="Három táblás lekérdezés (hely, munkalap, szerelo táblák)" />
 
     </children>
 </AnchorPane>

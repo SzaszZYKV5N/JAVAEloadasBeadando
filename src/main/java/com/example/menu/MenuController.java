@@ -21,8 +21,9 @@ public class MenuController {
     }
     @FXML
     AnchorPane rootPane;
-    @FXML
-    private TableView<Hely> tableView;
+    /*@FXML
+    private TableView<OlvasController.TableRow> tableView;
+    */
     @FXML
     private void Ujablak(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("second.fxml"));
@@ -51,6 +52,16 @@ public class MenuController {
             case "Olvas2":
                 fxmlFileName = "olvas2.fxml";
                 break;
+                case "Ír":
+                fxmlFileName = "ir.fxml";
+                break;
+            case "Módosít":
+                fxmlFileName = "modosit.fxml";
+                break;
+            case "Töröl":
+                fxmlFileName = "torol.fxml";
+                break;
+
             // További esetek hozzáadása szükség szerint
             default:
                 System.out.println("Ismeretlen menüpont: " + source.getText());

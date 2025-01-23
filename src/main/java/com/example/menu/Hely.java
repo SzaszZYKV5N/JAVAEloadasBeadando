@@ -1,6 +1,7 @@
+
 package com.example.menu;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "hely")
@@ -8,6 +9,7 @@ public class Hely {
     @Id
     @GeneratedValue
     @Column(name = "az")
+
     public int az;
 
     @Column(name = "telepules")
@@ -19,8 +21,8 @@ public class Hely {
     public Hely() {
     }
 
-    public Hely(int az, String telepules, String utca) {
-        this.az = az;
+    public Hely( String telepules, String utca) {
+
         this.telepules = telepules;
         this.utca = utca;
     }

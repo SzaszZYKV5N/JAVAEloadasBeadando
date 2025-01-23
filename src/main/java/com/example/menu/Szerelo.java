@@ -1,18 +1,21 @@
 package com.example.menu;
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "szerelo")
 public class Szerelo {
     @Id
-    @GeneratedValue
     @Column(name = "az")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     public int az;
+
 
     @Column(name = "nev")
     public String nev;
-@Column(name = "kezdev")
+    @Column(name = "kezdev")
     public int kezdev;
 
     public Szerelo() {
