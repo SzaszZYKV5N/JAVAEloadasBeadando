@@ -12,6 +12,7 @@ public class Olvas2Controller {
     @FXML
     private ComboBox<Szerelo> cb1;
 @FXML private Label lbFeltet;
+@FXML private TextField cimKereso;
     @FXML
     public TableView<OlvasDAO> tablazat;
     @FXML
@@ -51,7 +52,7 @@ public class Olvas2Controller {
         anyagarColumn.setCellValueFactory(new PropertyValueFactory<>("anyagar"));
         //listView feltöltése
         Legordulo();
-        feltetel = " WHERE sz.az = m.szereloaz AND m.helyaz = h.az ORDER BY m.helyaz";
+        feltetel = " WHERE sz.az = m.szereloaz AND m.helyaz = h.az ";
         // Adatok betöltése adatbázisból
         Tablabovit();
     }
@@ -80,6 +81,7 @@ public class Olvas2Controller {
     }
 
     private String feltetel=" AND sz.az = m.szereloaz AND m.helyaz = h.az ORDER BY m.helyaz";
+    private String cimfeltetel=" ";
 
     public void Tablabovit() throws SQLException {
         tablazat.getItems().clear(); // Táblázat elemeinek törlése
@@ -98,16 +100,27 @@ public class Olvas2Controller {
     }
 
 
+
     public void szuresClick(ActionEvent event) throws SQLException {
         int a = kivSzer();
-        if (a == 0) {
-            feltetel = " WHERE sz.az = m.szereloaz AND m.helyaz = h.az ";
-        } else {
-            feltetel = " WHERE sz.az = m.szereloaz AND m.helyaz = h.az AND m.szereloaz = " + a;
+        StringBuilder newFeltetel = new StringBuilder(" WHERE sz.az = m.szereloaz AND m.helyaz = h.az ");
+
+        // Szerelő szűrés hozzáadása
+        if (a != 0) {
+            newFeltetel.append(" AND m.szereloaz = ").append(a);
         }
-        feltetel += " ORDER BY m.helyaz";
+
+        // Utca név szűrés hozzáadása
+        if (!cimKereso.getText().isEmpty()) {
+            newFeltetel.append(" AND h.utca LIKE '").append(cimKereso.getText()).append("%'");
+        }
+
+        newFeltetel.append(" ORDER BY m.helyaz");
+        feltetel = newFeltetel.toString();
+
         Tablabovit();
     }
+
 
 
 
