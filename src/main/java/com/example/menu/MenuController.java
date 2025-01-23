@@ -52,7 +52,7 @@ public class MenuController {
             case "Olvas2":
                 fxmlFileName = "olvas2.fxml";
                 break;
-                case "Ír":
+            case "Ír":
                 fxmlFileName = "ir.fxml";
                 break;
             case "Módosít":
@@ -60,6 +60,9 @@ public class MenuController {
                 break;
             case "Töröl":
                 fxmlFileName = "torol.fxml";
+                break;
+            case "Párhuzamos":
+                fxmlFileName = "parh.fxml";
                 break;
 
             // További esetek hozzáadása szükség szerint

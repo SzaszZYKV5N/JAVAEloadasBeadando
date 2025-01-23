@@ -1,70 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<VBox alignment="TOP_CENTER" maxHeight="400.0" maxWidth="500" minHeight="400.0" minWidth="500.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.MenuController">
+<?import javafx.scene.text.Font?>
+<VBox alignment="TOP_CENTER" maxHeight="400.0" maxWidth="500" minHeight="400.0" minWidth="500.0"
+      style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.6"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.MenuController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-   <AnchorPane prefHeight="400.0" prefWidth="500.0">
-      <children>
-         <MenuBar centerShape="false" scaleShape="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-           <menus>
-             <Menu mnemonicParsing="false" text="Adatbázis">
-               <items>
-                 <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Olvas" />
-                     <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Olvas2" />
-                     <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Ír" />
-                     <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Módosít" />
-                   <SeparatorMenuItem />
-                     <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Töröl" />
-               </items>
-             </Menu>
-             <Menu mnemonicParsing="false" text="Soap Kliens">
-               <items>
-                     <MenuItem mnemonicParsing="false" text="Letöltés" />
-                 <MenuItem mnemonicParsing="false" text="Letöltés2" />
-                     <MenuItem mnemonicParsing="false" text="grafikon" />
-               </items>
-             </Menu>
-             <Menu mnemonicParsing="false" text="Párhuzamos" />
-               <Menu mnemonicParsing="false" text="Forex">
-                 <items>
-                   <MenuItem mnemonicParsing="false" text="Számlainformációk" />
-                 <MenuItem mnemonicParsing="false" text="Aktuális árak" />
-                     <MenuItem mnemonicParsing="false" text="Historikus árak" />
-                     <MenuItem mnemonicParsing="false" text="Pozíció nyitás" />
-                     <MenuItem mnemonicParsing="false" text="Pozíció zárás" />
-                     <SeparatorMenuItem />
-                     <MenuItem mnemonicParsing="false" text="Nyitott pozíciók" />
-                 </items>
-               </Menu>
-           </menus>
-            <padding>
-               <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-            </padding>
-         </MenuBar>
-         <AnchorPane prefHeight="400.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
-            <children>
-               <AnchorPane id="rootPane" fx:id="rootPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                  <children>
-                     <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane prefHeight="400.0" prefWidth="500.0">
+        <children>
+            <MenuBar centerShape="false" scaleShape="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                     AnchorPane.topAnchor="0.0">
+                <menus>
+                    <Menu mnemonicParsing="false" text="Adatbázis">
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Olvas"/>
+                            <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Olvas2"/>
+                            <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Ír"/>
+                            <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Módosít"/>
+                            <SeparatorMenuItem/>
+                            <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Töröl"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Soap Kliens">
+                        <items>
+                            <MenuItem mnemonicParsing="false" text="Letöltés"/>
+                            <MenuItem mnemonicParsing="false" text="Letöltés2"/>
+                            <MenuItem mnemonicParsing="false" text="grafikon"/>
+                        </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" onAction="#handleMenuAction" text="Párhuzamos">
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleMenuAction" text="Párhuzamos"/>
+                        </items>
+                        </Menu>
+                    <Menu mnemonicParsing="false" text="Forex">
+                        <items>
+                            <MenuItem mnemonicParsing="false" text="Számlainformációk"/>
+                            <MenuItem mnemonicParsing="false" text="Aktuális árak"/>
+                            <MenuItem mnemonicParsing="false" text="Historikus árak"/>
+                            <MenuItem mnemonicParsing="false" text="Pozíció nyitás"/>
+                            <MenuItem mnemonicParsing="false" text="Pozíció zárás"/>
+                            <SeparatorMenuItem/>
+                            <MenuItem mnemonicParsing="false" text="Nyitott pozíciók"/>
+                        </items>
+                    </Menu>
+                </menus>
+                <padding>
+                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+                </padding>
+            </MenuBar>
+            <AnchorPane prefHeight="400.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                <children>
+                    <AnchorPane id="rootPane" fx:id="rootPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                         <children>
-                        
-                            <Label fx:id="welcomeText" text="Vízvezeték szerelők" textFill="RED" underline="true">
-                              <font>
-                                 <Font size="18.0" />
-                              </font></Label>
-                           <Label text="Kérem válasszon a fenti menüpontok közül." />
+                            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+                                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <children>
+
+                                    <Label fx:id="welcomeText" text="Vízvezeték szerelők" textFill="RED"
+                                           underline="true">
+                                        <font>
+                                            <Font size="18.0"/>
+                                        </font>
+                                    </Label>
+                                    <Label text="Kérem válasszon a fenti menüpontok közül."/>
+                                </children>
+                            </VBox>
                         </children>
-                     </VBox>
-                  </children>
-               </AnchorPane>
-            </children>
-         </AnchorPane>
-      </children>
-   </AnchorPane>
+                    </AnchorPane>
+                </children>
+            </AnchorPane>
+        </children>
+    </AnchorPane>
 </VBox>
