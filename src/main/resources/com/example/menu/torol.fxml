@@ -6,7 +6,7 @@
 
 <AnchorPane scaleShape="false" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.TorolController">
     <children>
-        <Label layoutX="-2.0" layoutY="14.0" prefHeight="26.0" prefWidth="756.0" text="Új szerelő hozzáadása" textFill="#f50101">
+        <Label layoutX="-2.0" layoutY="14.0" prefHeight="26.0" prefWidth="756.0" text="Szerelő törlése" textFill="#f50101">
             <font>
                 <Font size="18.0" />
             </font></Label>
@@ -17,7 +17,7 @@
                 <TableColumn fx:id="belepColumn" prefWidth="85.0" text="Belépés" />
             </columns>
         </TableView>
-        <Label layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="755.0" text="Három táblás lekérdezés (szerelo táblák)" />
+        <Label layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="755.0" text="(szerelo táblák)" />
         <Button fx:id="btn1" layoutX="158.0" layoutY="198.0" mnemonicParsing="false" onAction="#torol" text="Törlés" />
         <Label layoutX="61.0" layoutY="84.0" text="A törlendő szerelő sorszáma: " />
         <ComboBox fx:id="cb1" layoutX="138" layoutY="77" AnchorPane.topAnchor="120.0" />

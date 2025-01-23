@@ -48,7 +48,7 @@ public class IrController {
     private Button btn1;
 
     private void Tablabovit() throws SQLException {
-        //OlvasDAO newOlvasDAO = new OlvasDAO(1,"Budapest", "Podhorszky utca 68"," Kiss Lajos",3,15000);
+
         tablazat.getItems().clear();
         Szerelo ujsor;
         Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/adatbazis/javabead.db");
