@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.text.Font?>
+<AnchorPane scaleShape="false" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.LetoltesController">
+<children>
+    <Label layoutX="-2.0" layoutY="14.0" prefHeight="26.0" prefWidth="756.0" text="Minden adat kiírása" textFill="#f50101">
+        <font>
+            <Font size="18.0" />
+        </font></Label><Label fx:id="textLabel1" wrapText="true" prefHeight="200" prefWidth="400" alignment="CENTER"/>
+    <Label layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="755.0" text="(MNB SOAP)" />
+
+    <Button fx:id="btn1" layoutX="158.0" layoutY="138.0" mnemonicParsing="false" onAction="#letoltes" text="Adatok letöltése" />
+
+
+</children>
+</AnchorPane>

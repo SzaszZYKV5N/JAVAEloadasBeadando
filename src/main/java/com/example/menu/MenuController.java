@@ -64,6 +64,12 @@ public class MenuController {
             case "Párhuzamos":
                 fxmlFileName = "parh.fxml";
                 break;
+            case "Letöltés":
+                fxmlFileName = "letoltes1.fxml";
+                break;
+            case "Letöltés2":
+                fxmlFileName = "letoltes2.fxml";
+                break;
 
             // További esetek hozzáadása szükség szerint
             default:
