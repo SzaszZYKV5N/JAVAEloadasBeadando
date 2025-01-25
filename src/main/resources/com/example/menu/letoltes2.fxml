@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="316.0" prefWidth="756.0" scaleShape="false" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.Letoltes2Controller">
+    <children>
+        <Label layoutX="1.0" layoutY="14.0" prefHeight="25.0" prefWidth="602.0" text="Az egyes valuták árfolyma adott napon" textFill="#e30202" />
+
+
+        <Label layoutX="18.0" layoutY="40.0" prefHeight="17.0" prefWidth="738.0" text=" " />
+        <Label layoutX="214.0" layoutY="104.0">Valuta:</Label>
+        <ComboBox fx:id="currencyComboBox" layoutX="263.0" layoutY="100.0" prefHeight="25.0" prefWidth="72.0" />
+        <Label layoutX="213.0" layoutY="157.0">Dátum:</Label>
+        <DatePicker fx:id="startDatePicker" layoutX="263.0" layoutY="153.0" />
+
+        <Button fx:id="SaveButton" layoutX="286.0" layoutY="199.0" onAction="#letolt2" text="Adatok Letöltése" />
+    </children>
+</AnchorPane>

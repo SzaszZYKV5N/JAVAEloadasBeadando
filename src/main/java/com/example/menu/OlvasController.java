@@ -14,8 +14,7 @@ import java.util.List;
 public class OlvasController {
 
 
-    @FXML
-    private Label welcomeText;
+
     @FXML
     public TableView<OlvasDAO> tablazat;
     @FXML
@@ -57,18 +56,9 @@ public class OlvasController {
 
 
 
-    @FXML
-    protected void onHelloButtonClick() throws SQLException {
-        welcomeText.setText("Welcome to JavaFX Application!");
-        OlvasDAO newOlvasDAO = new OlvasDAO( 0,"Budapest", "Podhorszky utca 68","Szabó Zotya",5,25000);
-        tablazat.getItems().add(newOlvasDAO);
 
-
-
-
-    }
-    public   void  Tablabovit() throws SQLException {
-        OlvasDAO newOlvasDAO = new OlvasDAO(1,"Budapest", "Podhorszky utca 68"," Kiss Lajos",3,15000);
+    private   void  Tablabovit() throws SQLException {
+        //OlvasDAO newOlvasDAO = new OlvasDAO(1,"Budapest", "Podhorszky utca 68"," Kiss Lajos",3,15000);
         OlvasDAO ujsor;
         Connection conn = DriverManager.getConnection("jdbc:sqlite:/c:/adatbazis/javabead.db");
         Statement stmt = conn.createStatement();
@@ -79,13 +69,12 @@ public class OlvasController {
                         "WHERE sz.az = m.szereloaz AND m.helyaz = h.az"+" ORDER BY m.helyaz"
         );
         while(rs.next()){
-
             ujsor = new OlvasDAO(rs.getInt("helyaz"), rs.getString("telepules"), rs.getString("utca"),rs.getString("nev"), rs.getInt("munkaora"), rs.getInt("anyagar")   );
             tablazat.getItems().add(ujsor);
 
         }
 
-        System.out.println("A tábla sorainak a száma:" + rs.getInt(1));
+
     }
 
 
